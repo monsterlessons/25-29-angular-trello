@@ -1,0 +1,162 @@
+/* BASE */
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+header{
+    background-color: #205c7e;
+    color: #FFF;
+    margin: 0;
+    padding: .2em;
+    overflow: hidden;
+}
+
+input{
+  border-radius: 4px;
+}
+
+/* END BASE */
+
+.app-name{
+    font-family: 'Yesteryear', cursive;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-indent: .5em;
+}
+
+.list{
+    width: 200px;
+    background-color: #e3e3e3;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #999;
+    vertical-align: top;
+    position: relative;
+}
+
+.list h1{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list input{
+  margin-bottom:0;
+}
+
+.list.new-list{
+  background-color: #628DA4;
+}
+
+.list-inline{
+    display: inline-block;
+}
+
+.lists-container{
+  padding: 20px;
+  position: relative;
+}
+
+.remove{
+    width: 15px;
+    height: 15px;
+    background: url( ../img/x.svg);
+}
+
+.remove-small{
+    width: 10px;
+    height: 10px;
+    background: url( ../img/x_sm.svg);
+}
+
+.remove-list{
+  position : absolute;
+  margin: 6px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  color: #205c7e;
+}
+
+.remove-card{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.no-display{
+    display: none;
+}
+
+.card{
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: 1px solid #b9b9b9;
+    position: relative;
+}
+
+.edit{
+    width: 15px;
+    height: 15px;
+    background: url( ../img/pen_alt_stroke.svg);
+}
+
+.edit-small{
+    width: 10px;
+    height: 10px;
+    background: url( ../img/pen_alt_stroke_sm.svg);
+}
+
+.edit-card{
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+}
+
+.edit:hover{
+    background: url( ../img/pen_alt_fill.svg);
+}
+
+.edit_sm:hover{
+    background: url( ../img/pen_alt_fill_sm.svg);
+}
+
+.card:hover{
+    border-color: #205c7e;
+}
+
+.hand{
+    cursor: pointer;
+}
+
+input.search{
+    width: 200px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.select-list{
+    margin: 10px 0 0 0;
+}
+
+.header-link{
+    color: #FFF;
+    vertical-align: middle;
+}
+
+.header-link:hover{
+    color: #e3e3e3;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
+
