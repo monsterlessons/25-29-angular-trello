@@ -20,11 +20,19 @@
 
     <div class="row">
       <section class="list list-inline"
-               ng-repeat="list in listsCtrl.lists">
+               ng-repeat="list in listsCtrl.lists"
+               ng-controller="listCtrl as listCtrl">
         <h1>{{list.listName}}</h1>
-
+        <a ng-click="listCtrl.removeList(list)" class="hand">
+          <div class="remove removeList"></div>
+        </a>
       </section>
 
+      <section class="list new-list list-inline">
+        <form ng-submit="listsCtrl.addList()">
+          <input type="text" ng-model="listsCtrl.listName">
+        </form>
+      </section>
     </div>
 
 
@@ -40,5 +48,6 @@
   <script src="js/app.js"></script>
   <script src="js/factories/listFactory.js"></script>
   <script src="js/controllers/listsCtrl.js"></script>
+  <script src="js/controllers/listCtrl.js"></script>
 </body>
 </html>
