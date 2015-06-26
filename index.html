@@ -39,8 +39,16 @@
           </div>
 
           <div ng-if='cardCtrl.isEditing'>
-            <form ng-submit='cardCtrl.updateCard(card)'>
-              <input type='text' ng-model='cardCtrl.editingCard.description'>
+            <form ng-submit='cardCtrl.updateCard()'>
+              <input type='text'
+                     close-editing
+                     is-editing='cardCtrl.isEditing'
+                     ng-model='cardCtrl.editingCard.description'>
+              <select class='select-list'
+                      ng-model='cardCtrl.editingCard.list_id'
+                      ng-change="cardCtrl.updateCard()"
+                      ng-options="list.id as list.listName for list in listsCtrl.lists">
+              </select>
             </form>
           </div>
 
@@ -85,5 +93,6 @@
   <script src="js/controllers/listsCtrl.js"></script>
   <script src="js/controllers/listCtrl.js"></script>
   <script src="js/controllers/cardCtrl.js"></script>
+  <script src="js/directives/closeEditing.js"></script>
 </body>
 </html>
