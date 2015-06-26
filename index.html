@@ -23,16 +23,33 @@
                ng-repeat="list in listsCtrl.lists"
                ng-controller="listCtrl as listCtrl">
         <h1>{{list.listName}}</h1>
+
+        <div class='card'
+             ng-repeat='card in listCtrl.getCards(list)'>
+        {{card.description}}
+        </div>
+
         <a ng-click="listCtrl.removeList(list)" class="hand">
-          <div class="remove removeList"></div>
+          <div class="remove remove-list"></div>
         </a>
+
+        <section class='new-card'>
+          <form ng-submit="listCtrl.createCard(list)">
+            <input type='text'
+                   ng-model='listCtrl.cardDescription'
+                   class='card-input'
+                   placeholder='New card'>
+          </form>
+        </section>
+
       </section>
 
       <section class="list new-list list-inline">
         <form ng-submit="listsCtrl.addList()">
-          <input type="text" ng-model="listsCtrl.listName">
+          <input type="text" ng-model='listsCtrl.listName'>
         </form>
       </section>
+
     </div>
 
 
@@ -47,6 +64,7 @@
 
   <script src="js/app.js"></script>
   <script src="js/factories/listFactory.js"></script>
+  <script src="js/factories/cardFactory.js"></script>
   <script src="js/controllers/listsCtrl.js"></script>
   <script src="js/controllers/listCtrl.js"></script>
 </body>
